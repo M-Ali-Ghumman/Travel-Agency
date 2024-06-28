@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starkk Travels</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="four">
+            <img src="./images/logo.jpg" alt="Starkk Travels" class="logo">
+        </div>
+        <div class="navbar">
+            <ul class="original">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <h1>Starkk Travels</h1>
+            <div class="dropdown-content">
+                <ul class="fake">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <button class="toggle-btn" onclick="toggleNav()">☰</button>
+    </nav>
+    <section class="main">
+        <div class="content">
+            <div class="title-div">
+                <span class="title">
+                    <span class="first">Starkk</span> <span class="second">Travels</span>
+                </span>
+            </div>
+            <div class="div-intro">
+                <p class="intro">
+                    Starkk Travels is your premier gateway to unforgettable adventures, offering tailor-made travel
+                    experiences that cater to every wanderlust dream. With a commitment to excellence, we provide
+                    seamless,
+                    personalized itineraries to ensure your journeys are as extraordinary as the destinations
+                    themselves.
+                </p>
+            </div>
+        </div>
+
+        <section class="booking">
+            <div class="booking-options">
+                <div class="booking-option active" data-travel-type="plane">
+                    <img src="./images/plane.png" alt="Plane">
+                    <a>Book a Flight</a>
+                </div>
+                <div class="booking-option" data-travel-type="cruise">
+                    <img src="./images/cruise.jpeg" alt="Cruise">
+                    <a>Book a Cruise</a>
+                </div>
+                <div class="booking-option" data-travel-type="train">
+                    <img src="./images/train.png" alt="Train">
+                    <a>Book a Train</a>
+                </div>
+                <div class="booking-option" data-travel-type="hotel">
+                    <img src="./images/hotel.jpg" alt="Hotel">
+                    <a>Book a Hotel</a>
+                </div>
+            </div>
+
+            <div class="booking-phone">
+                <div class="booking-option active" data-travel-type="plane">
+                    <a>Book a Flight</a>
+                </div>
+                <div class="booking-option" data-travel-type="cruise">
+                    <a>Book a Cruise</a>
+                </div>
+                <div class="booking-option" data-travel-type="train">
+                    <a>Book a Train</a>
+                </div>
+                <div class="booking-option" data-travel-type="hotel">
+                    <a>Book a Hotel</a>
+                </div>
+            </div>
+
+            <div class="booking-forms">
+                <div class="booking-form plane-form active">
+                    <h3>Book a Flight</h3>
+                    <form action="#">
+                        <div class="form-row">
+                            <label for="flight-from">Flying from:</label>
+                            <input type="text" id="flight-from" name="flight-from" required placeholder="Enter City">
+                            <label for="flight-to">Flying to:</label>
+                            <input type="text" id="flight-to" name="flight-to" required placeholder="Enter City">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="departing">Departing:</label>
+                            <input type="date" id="departing" name="departing" required>
+                            <label for="returning">Returning:</label>
+                            <input type="date" id="returning" name="returning" required>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="adults">Adults:</label>
+                            <input type="number" id="adults" name="adults" required placeholder="Enter Number">
+                            <label for="children">Children:</label>
+                            <input type="number" id="children" name="children" required placeholder="Enter Number">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="booking-form train-form">
+                    <h3>Book a Train</h3>
+                    <form action="#">
+                        <div class="form-row">
+                            <label for="train-from">Departure city:</label>
+                            <input type="text" id="train-from" name="train-from" required placeholder="Enter City">
+                            <label for="train-to">Destination city:</label>
+                            <input type="text" id="train-to" name="train-to" required placeholder="Enter City">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="train-departing">Departing:</label>
+                            <input type="date" id="train-departing" name="train-departing" required>
+                            <label for="train-returning">Returning:</label>
+                            <input type="date" id="train-returning" name="train-returning" required>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="train-adults">Adults:</label>
+                            <input type="number" id="train-adults" name="train-adults" required
+                                placeholder="Enter Number">
+                            <label for="train-children">Children:</label>
+                            <input type="number" id="train-children" name="train-children" required
+                                placeholder="Enter Number">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="booking-form cruise-form">
+                    <h3>Book a Cruise</h3>
+                    <form action="#">
+                        <div class="form-row">
+                            <label for="sailing-from">Sailing from:</label>
+                            <input type="text" id="sailing-from" name="sailing-from" required placeholder="Enter City">
+                            <label for="sailing-to">Sailing to:</label>
+                            <input type="text" id="sailing-to" name="sailing-to" required placeholder="Enter City">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="cruise-departing">Departing:</label>
+                            <input type="date" id="cruise-departing" name="cruise-departing" required>
+                            <label for="cruise-returning">Returning:</label>
+                            <input type="date" id="cruise-returning" name="cruise-returning" required>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="cruise-adults">Adults:</label>
+                            <input type="number" id="cruise-adults" name="cruise-adults" required
+                                placeholder="Enter Number">
+                            <label for="cruise-children">Children:</label>
+                            <input type="number" id="cruise-children" name="cruise-children" required
+                                placeholder="Enter Number">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="booking-form hotel-form">
+                    <h3>Book a Hotel</h3>
+                    <form action="#">
+                        <div class="form-row">
+                            <label for="hotel-city">City:</label>
+                            <input type="text" id="hotel-city" name="hotel-city" required placeholder="Enter City">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="check-in">Check In:</label>
+                            <input type="date" id="check-in" name="check-in" required>
+                            <label for="check-out">Check Out:</label>
+                            <input type="date" id="check-out" name="check-out" required>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="hotel-adults">Adults:</label>
+                            <input type="number" id="hotel-adults" name="hotel-adults" required
+                                placeholder="Enter Number">
+                            <label for="hotel-children">Children:</label>
+                            <input type="number" id="hotel-children" name="hotel-children" required
+                                placeholder="Enter Number">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="best">
+        <div class="exp">
+            <div class="exp-title-div">
+                <h1 class="exp-title">WHY WE ARE THE BEST</h1>
+            </div>
+            <div class="exp-para-div">
+                <p class="exp-para">
+                    Our travel agency stands out for its exceptional customer service and extensive expertise in
+                    curating unforgettable
+                    travel experiences worldwide. We prioritize personalized itineraries and seamless logistics to
+                    ensure every journey
+                    exceeds expectations.
+                </p>
+            </div>
+        </div>
+        <div class="special">
+            <div class="box">
+                <img src="./images/travel.png" alt="Image 1">
+                <p>
+                    Embark on a journey of a lifetime with Starkk Travels, where every adventure is meticulously crafted
+                    to create
+                    unparalleled travel moments.
+                </p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="box">
+                <img src="./images/discover.jpg" alt="Image 2">
+                <p>
+                    Discover the world and unlock endless adventures, exploring new cultures, breathtaking landscapes,
+                    and unforgettable
+                    experiences.
+                </p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="box">
+                <img src="./images/booking.jpg" alt="Image 3">
+                <p>
+                    Streamline your travel plans with our seamless booking service, ensuring a hassle-free experience
+                    from start to finish.
+                </p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="box">
+                <img src="./images/support.png" alt="Image 4">
+                <p>
+                    Experience peace of mind with our travel agency's dedicated customer support, available 24/7 to
+                    assist you every step of
+                    the way.
+                </p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="package">
+        <div class="niagara">
+            <div class="niagara-title-div">
+                <h class="niagara-title">NIAGARA FALLS, CANADA</h>
+            </div>
+            <div class="niagara-para-div">
+                <p class="niagara-para">
+                    Experience the majestic beauty of Niagara Falls with our exclusive travel package, offering
+                    unforgettable views and
+                    thrilling adventures for an unforgettable getaway.
+                </p>
+            </div>
+            <div class="niagara-details">
+                <span class="niagara-destination">
+                    Destination: Ontario, Canada
+                </span>
+                <span class="niagara-price">
+                    $129.00 PER PERSON
+                </span>
+            </div>
+        </div>
+        <div class="detail">
+            <a class="detail-btn" href="#">DETAILS</a>
+        </div>
+    </section>
+
+    <section class="cruise">
+        <h1>POPULAR CRUISES</h1>
+        <p>
+            Embark on an unforgettable journey with our travel company's luxurious cruise, where adventure meets
+            elegance on the high
+            seas.
+        </p>
+        <div class="cruise-container">
+            <div class="animation">
+                <div id="bahamas" class="cruise-box">
+                    <a href="#" class="cruise-link">
+                        <img src="./images/Bahamas.avif" alt="Cruise 1">
+                        <div class="location">
+                            <span class="place">BAHAMAS</span>
+                            <span class="night"> 12 Nights</span>
+                        </div>
+                        <p>
+                            Embark on a Bahamian adventure with our all-inclusive cruise. Enjoy vibrant cultures and
+                            pristine beaches.
+                        </p>
+                        <div class="review-container">
+                            <div class="review">
+                                <div class="stars">
+                                    &#9733;&#9733;&#9733;&#9733;&#9734;
+                                </div>
+                                <div class="views">
+                                    92 reviews
+                                </div>
+                            </div>
+                            <a href="#" class="see-all">See all</a>
+                        </div>
+                    </a>
+                </div>
+                <div id="greece" class="cruise-box">
+                    <a href="#" class="cruise-link">
+                        <img src="./images/Greece.avif" alt="Cruise 2">
+                        <div class="location">
+                            <span class="place">GREECE</span>
+                            <span class="night"> 18 Nights</span>
+                        </div>
+                        <p>
+                            Experience the ultimate luxury on our Greek Cruise. Sail through crystal-clear waters and
+                            explore ancient cities.
+                        </p>
+                        <div class="review-container">
+                            <div class="review">
+                                <div class="stars">
+                                    &#9733;&#9733;&#9733;&#9733;&#9733;
+                                </div>
+                                <div class="views">
+                                    38 reviews
+                                </div>
+                            </div>
+                            <a href="#" class="see-all">See all</a>
+                        </div>
+                    </a>
+                </div>
+                <div id="mediterranean" class="cruise-box">
+                    <a href="#" class="cruise-link">
+                        <img src="./images/Mediterranean.jpg" alt="Cruise 3">
+                        <div class="location">
+                            <span class="place">AUSTRALIA</span>
+                            <span class="night"> 8 Nights</span>
+                        </div>
+                        <p>Embark on an unforgettable journey with our Australian cruise, exploring the coastline and
+                            vibrant cities.
+                        </p>
+                        <div class="review-container">
+                            <div class="review">
+                                <div class="stars">
+                                    &#9733;&#9733;&#9733;&#9733;&#9734;
+                                </div>
+                                <div class="views">
+                                    57 reviews
+                                </div>
+                            </div>
+                            <a href="#" class="see-all">See all</a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="customer">
+        <div class="custom">
+            <img src="./images/cust.png" alt="">
+        </div>
+        <div class="happiness">
+            <h2>CUSTOMER SATISFACTION</h2>
+            <p class="sat">Our commitment to customer satisfaction is reflected in every interaction.</p>
+            <p class="sat">Below are some of the customers' reviews</p>
+            <div class="comment">
+                <p class="comments">
+                    "Absolutely delighted with my travel experience! From seamless bookings to personalized
+                    recommendations, the attention to
+                    detail made every moment memorable." - Jean Tyrone
+                </p>
+            </div>
+            <div class="comment">
+                <p class="comments">
+                    "The customer service was outstanding. They not only met but exceeded my expectations. I can't wait
+                    to book my next
+                    adventure with them!" - Lelouch Anderson
+                </p>
+                <button class="see-more">See More</button>
+            </div>
+            <div class="rating-bars">
+                <div class="bar">
+                    <span class="type">Flights</span>
+                    <span class="percent">90%</span>
+                    <div class="fill" data-percentage="90%"></div>
+                </div>
+                <div class="bar">
+                    <span class="type">Cruises</span>
+                    <span class="percent">88%</span>
+                    <div class="fill" data-percentage="88%"></div>
+                </div>
+                <div class="bar">
+                    <span class="type">Trains</span>
+                    <span class="percent">92%</span>
+                    <div class="fill" data-percentage="92%"></div>
+                </div>
+                <div class="bar">
+                    <span class="type">Hotels</span>
+                    <span class="percent">87%</span>
+                    <div class="fill" data-percentage="87%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="department">
+        <div id="camping" class="unit">
+            <a href="#" class="unit-link">
+                <img src="./images/camping.avif" alt="">
+            </a>
+        </div>
+        <div id="mountain" class="unit">
+            <a href="#" class="unit-link">
+                <img src="./images/mountain.webp" alt="">
+            </a>
+        </div>
+        <div id="summer" class="unit">
+            <a href="#" class="unit-link">
+                <img src="./images/summer.avif" alt="">
+            </a>
+        </div>
+        <div id="desert" class="unit">
+            <a href="#" class="unit-link">
+                <img src="./images/desert.jpg" alt="">
+            </a>
+        </div>
+        <div id="forest" class="unit">
+            <a href="#" class="unit-link">
+                <img src="./images/forest.jpg" alt="">
+            </a>
+        </div>
+        <div id="city" class="unit">
+            <a href="#" class="unit-link">
+                <img src="./images/city.jpg" alt="">
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="outro">
+            <div class="outro-img">
+                <img src="./images/logo.jpg" alt="">
+            </div>
+            <p>
+                Embark on your next adventure with Starkk Travels. Whether you are fond of the the sun-kissed shores of
+                distant beaches, the
+                exhilarating heights of mountain peaks, or the cultural wonders of bustling cities, we are here to
+                encase your dreams into
+                extraordinary journeys.
+            </p>
+            <p>
+                Feel free to customize it further to fit the specific branding and messaging of the travel agency.
+            </p>
+        </div>
+        <div class="specialz">
+            <h1>Travel Specialists</h1>
+            <p>
+                <a href="#" class="arrow-link">First Class Flights</a>
+                <hr>
+                <a href="#" class="arrow-link">Accessible Travel</a>
+                <hr>
+                <a href="#" class="arrow-link">Amazing Cruises</a>
+                <hr>
+            </p>
+            <div class="social-icons">
+                <a href="#" class="facebook" aria-label="Facebook">
+                    <img src="./images/facebook.webp" alt="">
+                </a>
+                <a href="#" id="e" class="googleplus" aria-label="Google Plus">
+                    <img src="./images/google+.png" alt="">
+                </a>
+                <a href="#" class="twittery" aria-label="Twitter">
+                    <img src="./images/twitter.webp" alt="">
+                </a>
+                <a href="#" class="youtube" aria-label="YouTube">
+                    <img src="./images/youtube.jpg" alt="">
+                </a>
+                <a href="#" class="linkedin" aria-label="LinkedIn">
+                    <img src="./images/linked.png" alt="">
+                </a>
+                <a href="#" class="instagram" aria-label="Instagram">
+                    <img src="./images/instagram.avif" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="twitter">
+            <h1>Our Twitter</h1>
+            <p>
+                <span class="name">@chrollo.lucilfer</span>
+                Just got back from an amazing vacation planned by @StarkkTravels!
+                <span class="time">10:15 AM · Mar 25, 2024</span>
+            </p>
+            <hr>
+            <p>
+                <span class="name">@killua_zoldyck</span>
+                Huge shoutout to @StarkkTravels for organizing the best trip to Bali! 🌺🏖️ #StarkkTravel #Bali
+                #TravelGoals
+                <span class="time">4:30 PM · Apr 10, 2024</span>
+            </p>
+            <hr>
+        </div>
+        <div class="newsletter">
+            <h2>Newsletter</h2>
+            <div class="line">
+                <p>Stay updated with our latest travel deals and tips. Subscribe now!</p>
+            </div>
+            <div class="newsletter-input-container">
+                <input type="email" placeholder="Email" class="newsletter-input">
+                <span class="arrow">➔</span>
+            </div>
+            <a href="#" class="submit-button">Submit</a>
+            <div class="contact-info">
+                <p>📞 Telephone: (123) 456-7890</p>
+                <p>📧 Email: info@starkktravels.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
